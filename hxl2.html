@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Cute Valentine Gallery 💗 2026</title>
+  <style>
+    :root {
+      --pink: #ff9ec1;
+      --deep-pink: #ff5e9e;
+      --light-pink: #fff0f8;
+      --cream: #fff5f9;
+    }
+
+    * { margin:0; padding:0; box-sizing:border-box; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: linear-gradient(to bottom, var(--light-pink), #ffebee);
+      min-height: 100vh;
+      color: #444;
+      overflow-x: hidden;
+      background-image: 
+        radial-gradient(circle at 15% 20%, rgba(255,105,180,0.12) 0%, transparent 40%),
+        url('https://img.freepik.com/premium-photo/white-hearts-red-background-wallpaper_280388-986.jpg');
+      background-size: cover, 400px;
+      background-attachment: fixed;
+    }
+
+    .floating-heart {
+      position: fixed;
+      font-size: 2rem;
+      color: var(--pink);
+      pointer-events: none;
+      z-index: 5;
+      animation: drift 18s infinite linear;
+      opacity: 0.6;
+    }
+
+    @keyframes drift {
+      0%   { transform: translateY(110vh) translateX(-20vw) rotate(0deg); }
+      100% { transform: translateY(-20vh) translateX(30vw) rotate(1080deg); }
+    }
+
+    header {
+      text-align: center;
+      padding: 70px 20px 30px;
+    }
+
+    h1 {
+  font-size: 3.8rem;
+  color: white;
+  text-shadow: 
+    0 3px 12px rgba(0, 0, 0, 0.4),
+    0 0 15px rgba(255, 94, 158, 0.6);
+  margin-bottom: 10px;
+}
+
+
+    .subtitle { font-size: 1.4rem; color: #e91e63; }
+
+    /* Valentine Question */
+    #valentine-ask {
+      max-width: 700px;
+      margin: 30px auto;
+      padding: 40px 25px;
+      background: rgba(255,255,255,0.88);
+      border-radius: 28px;
+      box-shadow: 0 12px 40px rgba(255,105,180,0.25);
+      text-align: center;
+      border: 3px dashed var(--pink);
+    }
+
+    #valentine-ask h2 { 
+  color: red; 
+  font-size: 2.4rem; 
+  margin-bottom: 25px; 
+  text-shadow: 
+    0 3px 12px rgba(0, 0, 0, 0.35),
+    0 0 12px rgba(255, 94, 158, 0.6);
+}
+
+
+    .btns { 
+      display: flex; 
+      justify-content: center; 
+      gap: 50px; 
+      position: relative; 
+      flex-wrap: wrap; 
+    }
+
+    .btn {
+      padding: 16px 48px;
+      font-size: 1.5rem;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+      transition: all 0.3s;
+    }
+
+    #yes { 
+  background: #ff2f4f;   /* cute romantic red */
+  color: white; 
+}
+
+#yes:hover { 
+  transform: scale(1.12); 
+  box-shadow: 0 0 25px rgba(255, 47, 79, 0.7);
+}
+
+
+    #no {
+      background: #e0e0e0;
+      color: #555;
+      position: relative;
+    }
+
+    #no.running { position: absolute; transition: top 0.5s, left 0.5s; }
+
+    #response { 
+      margin-top: 35px; 
+      font-size: 1.6rem; 
+      color: var(--deep-pink); 
+      min-height: 100px; 
+    }
+
+    /* Gallery Section */
+    .gallery-wrap {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 40px 25px;
+    }our
+
+    .gallery-card {
+      background: white;
+      padding: 15px 15px 50px;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      transform: rotate(3deg) translateY(0);
+      transition: all 0.6s ease;
+      animation: floatCard 6s infinite ease-in-out;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .gallery-card:nth-child(even) { 
+      transform: rotate(-3deg); 
+      animation-delay: 1.5s; 
+    }
+
+    .gallery-card:nth-child(3n) { animation-delay: 3s; }
+    .gallery-card:nth-child(4n) { animation-delay: 4.2s; }
+
+    @keyframes floatCard {
+      0%,100% { transform: rotate(3deg) translateY(0) translateX(0); }
+      50%     { transform: rotate(3deg) translateY(-12px) translateX(6px); }
+    }
+
+    .gallery-card:hover {
+      transform: rotate(0deg) scale(1.08) translateY(-15px) !important;
+      animation-play-state: paused;
+      box-shadow: 0 20px 50px rgba(255,94,158,0.4);
+      z-index: 10;
+    }
+
+    .gallery-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border: 10px solid white;
+      box-shadow: inset 0 0 8px rgba(0,0,0,0.08);
+    }
+
+    .caption {
+  text-align: center;
+  margin-top: 12px;
+  font-style: italic;
+  color: white;
+  font-size: 1.05rem;
+  text-shadow: 
+    0 2px 6px rgba(0, 0, 0, 0.5),
+    0 0 10px rgba(255, 94, 158, 0.4);
+}
+
+
+    footer {
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--deep-pink);
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2.8rem; }
+      .gallery-wrap { gap: 50px 20px; }
+      .btns { flex-direction: column; gap: 30px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating hearts -->
+  <script>
+    function spawnHeart() {
+      const h = document.createElement('div');
+      h.className = 'floating-heart';
+      h.innerHTML = Math.random() > 0.5 ? '💗' : '❤️';
+      h.style.left = Math.random() * 100 + 'vw';
+      h.style.animationDuration = (Math.random() * 12 + 12) + 's';
+      document.body.appendChild(h);
+      setTimeout(() => h.remove(), 30000);
+    }
+    setInterval(spawnHeart, 900);
+    for(let i=0; i<12; i++) setTimeout(spawnHeart, i*400);
+  </script>
+
+  <header>
+    <h1>Our Cute Little Love Gallery 💕</h1>
+    <p class="subtitle">Valentine Week 2026 – Just for you ♡</p>
+  </header>
+
+  <!-- Will you be my Valentine? -->
+  <section id="valentine-ask">
+    <h2>Will You Be My Valentine? 🌸</h2>
+    <div class="btns">
+      <button id="yes" class="btn" onclick="sayYes()">Yes!! 💖</button>
+      <button id="no" class="btn" onmouseover="runNo()" onclick="surrender()">No 😢</button>
+    </div>
+    <div id="response"></div>
+  </section>
+
+  <!-- 6 Cute Moving Gallery Cards -->
+  <div class="gallery-wrap">
+
+    <div class="gallery-card">
+  <img src="IMG_4013.JPG" alt="Couple holding hands">
+  <div class="caption">That day we couldn't stop smiling at each other</div>
+</div>
+
+
+    <div class="gallery-card">
+      <img src="IMG_5377.JPG" alt="Romantic beach moment">
+      <div class="caption">Rokaa dayyy</div>
+    </div>
+
+    <div class="gallery-card">
+      <img src="IMG-20210801-WA0112.JPG" alt="Cute animated couple">
+      <div class="caption">Our first trip together</div>
+    </div>
+
+    <div class="gallery-card">
+      <img src="A88AFCAA-1200-41B0-BECA-BE038BBF0AF5.JPG">
+      <div class="caption">You, me, and cozy forever vibes</div>
+    </div>
+
+    <div class="gallery-card">
+      <img src="1504694634260.JPG" alt="Floral frame couple">
+      <div class="caption">Framed in flowers because you're my favorite</div>
+    </div>
+
+    <div class="gallery-card">
+      <img src="Snapchat-1266564758.JPG" alt="Hearts floating">
+      <div class="caption">Farewell day</div>
+    </div>
+
+  </div>
+
+  <footer>Made with tons of love in Delhi just for my special one • Feb 2026 ♡</footer>
+
+  <script>
+    let attempts = 0;
+
+    function runNo() {
+      attempts++;
+      const noBtn = document.getElementById('no');
+      if (attempts < 6) {
+        const x = Math.random() * (window.innerWidth - 180);
+        const y = Math.random() * (window.innerHeight - 180);
+        noBtn.style.left = x + 'px';
+        noBtn.style.top  = y + 'px';
+        noBtn.classList.add('running');
+        noBtn.textContent = attempts > 2 ? "Please? 🥺" : "Nooo don't click me!";
+      } else {
+        noBtn.textContent = "Okay... you win 😔";
+        noBtn.disabled = true;
+      }
+    }
+
+    function surrender() {
+      document.getElementById('response').innerHTML = 
+        '<span style="color:#ff5e9e;">Aww… but my heart still chooses you every day 💔<br>Change your mind anytime, okay? 🥰</span>';
+    }
+
+    function sayYes() {
+      document.getElementById('response').innerHTML = 
+        '<span style="color:#ff3366; font-weight:bold;">Yayyyy!!! 💖💖💖<br>You\'re officially my Valentine forever!<br>Get ready for cuddles & surprises 😘</span>';
+      
+      // Heart burst
+      for(let i=0; i<25; i++) {
+        setTimeout(() => {
+          const h = document.createElement('div');
+          h.className = 'floating-heart';
+          h.innerHTML = '💗';
+          h.style.left = Math.random()*100 + 'vw';
+          h.style.top = Math.random()*100 + 'vh';
+          h.style.fontSize = '2.5rem';
+          document.body.appendChild(h);
+          setTimeout(()=>h.remove(), 8000);
+        }, i*120);
+      }
+    }
+  </script>
+
+</body>
+</html>
